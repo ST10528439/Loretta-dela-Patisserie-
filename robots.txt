@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ST10528439.github.io/Loretta-dela-Patisserie-/sitemap.xml
+Sitemap: https://st10528439.github.io/Loretta-dela-Patisserie-/sitemap.xml
