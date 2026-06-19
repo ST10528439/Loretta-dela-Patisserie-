@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiries — Loretta dela Patisserie</title>
+   <meta name="description" content="Loretta dela Patisserie- Custom celebration cakes, luxury cakes & bento cakes in Pretoria. Order online for weddings, birthdays & special events">
+  <meta name="keywords" content="custom cakes Pretoria, wedding cakes, birthday cakes, bento cakes, luxury cakes South Africa">
+
+<!--Page speed + Security-->
+  <meta http-equiv="X-Frame-Options" content="deny">
+  <meta name="referrer" content="no-referrer">
+  <link rel="stylesheet" href="css_assets/mystyles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-brand">
+      <img src="images/logo.png" alt="Loretta dela Patisserie logo">
+      <div class="brand-name">
+        <strong>Loretta dela Patisserie</strong>
+        Since 2021 · Pretoria
+      </div>
+    </div>
+    <input type="checkbox" id="nav-toggle" style="display:none;">
+    <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about_us_.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="enquiries.html" class="active">Enquiries</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  #nav-toggle:checked + label + nav .nav-menu { display:flex !important; }
+
+  /* Enquiry form specific styles */
+  .enq-form { max-width: 760px; margin: 0 auto; }
+
+  .enq-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 3rem;
+  }
+
+  .form-group { margin-bottom: 2.8rem; position: relative; }
+
+  .form-group label {
+    font-family: var(--sans);
+    font-size: 0.6rem;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.7rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.9rem 0;
+    border: none;
+    border-bottom: 1px solid rgba(201,149,90,0.35);
+    background: transparent;
+    font-family: var(--cond);
+    font-size: 1.05rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--dark);
+    border-radius: 0;
+    transition: border-color 0.3s;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .form-group select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23b8922a'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    padding-right: 1.2rem;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-bottom-color: var(--gold);
+  }
+
+  .form-group textarea {
+    min-height: 110px;
+    resize: vertical;
+    line-height: 1.7;
+  }
+
+  /* Placeholder */
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: rgba(74,44,26,0.3);
+    font-style: italic;
+  }
+
+  .form-divider {
+    border: none;
+    border-top: 1px solid rgba(201,149,90,0.2);
+    margin: 1rem 0 3rem;
+  }
+
+  .form-section-title {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--mid);
+    letter-spacing: 0.04em;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+  }
+
+  .enq-submit {
+    display: block;
+    width: 100%;
+    font-family: var(--sans);
+    font-size: 0.62rem;
+    font-weight: 400;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--dark);
+    background: transparent;
+    border: 1px solid var(--gold);
+    padding: 1.3rem 2rem;
+    cursor: pointer;
+    transition: all 0.35s var(--ease);
+    margin-top: 1rem;
+  }
+
+  .enq-submit:hover {
+    background: var(--gold);
+    color: var(--white);
+  }
+
+  .form-note {
+    font-family: var(--cond);
+    font-size: 0.82rem;
+    font-style: italic;
+    color: var(--mid);
+    opacity: 0.55;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .enq-form .form-row { grid-template-columns: 1fr; gap: 0; }
+  }
+</style>
+
+<div class="page-hero">
+  <span class="hero-eyebrow">Order Your Cake</span>
+  <h1>Make an Enquiry</h1>
+  <span class="ornament" style="margin-top:1rem;">✦ &nbsp; ✦ &nbsp; ✦</span>
+</div>
+
+<main>
+
+  <div class="enquiries-intro">
+    <span class="section-label">Order Form</span>
+    <h2>Tell Us About Your Dream Cake</h2>
+    <p style="max-width:580px; margin:0 auto 0.4rem;">
+      Please complete the form below with as much detail as possible. We will respond
+      within one business day to confirm your order and provide a final quote.
+    </p>
+    <p style="font-size:0.82rem; opacity:0.55; font-style:italic; margin:0;">
+      Custom cakes require 7 days' notice &nbsp;·&nbsp; Luxury cakes 5 days &nbsp;·&nbsp; Bento cakes 2 days.
+    </p>
+  </div>
+
+  <!-- Redesigned form -->
+  <section style="padding: 4rem 5rem;">
+    <form id="enquiry-form" class="enq-form" action="#" method="post">
+
+      <!-- Personal Details -->
+      <p class="form-section-title">Personal Details</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="enq-name">Full Name</label>
+          <input type="text" id="enq-name" name="full_name" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="enq-phone">Phone Number</label>
+          <input type="tel" id="enq-phone" name="phone" placeholder="e.g. 072 000 0000" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="enq-email">Email Address</label>
+        <input type="email" id="enq-email" name="email" placeholder="your@email.com" required>
+      </div>
+
+      <hr class="form-divider">
+
+      <!-- Order Details -->
+      <p class="form-section-title">Order Details</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="enq-type">Cake Type</label>
+          <select id="enq-type" name="cake_type" required>
+            <option value="" disabled selected>Select a cake type</option>
+            <option value="custom">Custom Celebration Cake</option>
+            <option value="luxury">Luxury Cake</option>
+            <option value="bento">Bento Cake</option>
+            <option value="unsure">Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="enq-occasion">Occasion</label>
+          <select id="enq-occasion" name="occasion">
+            <option value="" disabled selected>Select an occasion</option>
+            <option value="birthday">Birthday</option>
+            <option value="wedding">Wedding</option>
+            <option value="graduation">Graduation</option>
+            <option value="anniversary">Anniversary</option>
+            <option value="corporate">Corporate Event</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="enq-date">Event Date</label>
+          <input type="date" id="enq-date" name="event_date" required>
+        </div>
+        <div class="form-group">
+          <label for="enq-size">Number of Guests / Servings</label>
+          <input type="text" id="enq-size" name="servings" placeholder="e.g. 30 guests">
+        </div>
+      </div>
+
+      <hr class="form-divider">
+
+      <!-- Design Notes -->
+      <p class="form-section-title">Design &amp; Preferences</p>
+      <div class="form-group">
+        <label for="enq-flavour">Flavour Preference</label>
+        <input type="text" id="enq-flavour" name="flavour" placeholder="e.g. vanilla, red velvet, chocolate…">
+      </div>
+      <div class="form-group">
+        <label for="enq-design">Design &amp; Theme Notes</label>
+        <textarea id="enq-design" name="design_notes" placeholder="Describe your vision — colours, theme, style, any inspirations…"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="enq-delivery">Delivery or Collection?</label>
+        <select id="enq-delivery" name="delivery">
+          <option value="" disabled selected>Please select</option>
+          <option value="delivery">Delivery (Gauteng)</option>
+          <option value="collection">Collection (Pretoria)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="enq-other">Anything Else We Should Know?</label>
+        <textarea id="enq-other" name="other_notes" placeholder="Allergies, special requests, or any other details…"></textarea>
+      </div>
+
+      <button type="submit" class="enq-submit">Submit Enquiry</button>
+      <p class="form-note">
+        We will be in touch within one business day to confirm availability and your final quote.
+      </p>
+
+    </form>
+  </section>
+
+  <!-- Alternative contact -->
+  <section style="text-align:center; background:var(--dark); border-color:rgba(201,149,90,0.3);">
+    <h2 style="color:var(--sand-lt);">Prefer to Chat Directly?</h2>
+    <p style="color:var(--pale); max-width:480px; margin:0 auto 1.5rem;">
+      You're welcome to reach us via WhatsApp or email for a quicker conversation about your order.
+    </p>
+    <p style="color:var(--gold-lt); font-family:var(--cond); font-size:1.3rem; font-style:italic; margin-bottom:0.4rem;">
+      072 730 6060
+    </p>
+    <p style="color:var(--sand-lt); font-size:0.85rem; opacity:0.7;">
+      info@lorettadelapatisserie.com
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-brand">Loretta dela Patisserie</div>
+  <p class="footer-tagline">Handmade with love · Since 2021</p>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about_us_.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="enquiries.html">Enquiries</a></li>
+    </ul>
+  </nav>
+  <p class="footer-copy">Loretta dela Patisserie &copy; &trade; 2026. All rights reserved.</p>
+</footer>
+
+<script src="js_assets/Main.JS"></script>
+</body>
+</html>

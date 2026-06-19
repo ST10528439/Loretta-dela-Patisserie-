@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ST10528439.github.io/Loretta dela Patisserie website/sitemap.xml
